@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,6 +24,7 @@ public class LandingPage{
 	driver.get(landingPageUrl);
 	driver.manage().window().maximize();
 	driver.findElement(By.id("logincontrol_username")).sendKeys("dtk600");
+	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	
 	//String actualTitle=driver.getTitle();
 	
